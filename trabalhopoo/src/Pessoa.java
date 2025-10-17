@@ -21,4 +21,8 @@ public class Pessoa {
         return nasc;
     }
 
+    public String toString() {
+        return this.getNome() + " - CPF: " + this.getCpf();
+    }
+
 }

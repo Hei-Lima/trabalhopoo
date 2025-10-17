@@ -10,4 +10,8 @@ public class Cliente extends Pessoa {
         return email;
     }
 
+    @Override
+    public String toString() {
+        return this.getNome() + " - CPF: " + this.getCpf() + " - " + this.getEmail();
+    }
 }

@@ -1,13 +1,22 @@
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Veiculo v = new Veiculo("Mercedes", "B2000", 2014, 12, 2015, 12000.99);
-        Eletrico e = new Eletrico("BYD", "King", 2022, 10, 2023, 320000.99, 100.29, 212.212);
-        Combustao c = new Combustao("Honda", "Civic", 2021, 9, 2022, 120000.10, 100.2, 200.2);
-        Hibrido h = new Hibrido("Toyota", "Corolla", 2020, 2, 2021, 2000.212, 100, 2000, 300, 2000);
+        Entrada io = new Entrada();
+        Sistema s = new Sistema();
 
-        System.out.println(v.toString());
-        System.out.println(e.toString());
-        System.out.println(c.toString());
-        System.out.println(h.toString());
+        int op = io.menu();
+
+        while (op != 0) {
+            switch(op) {
+                case 1:
+                    io.cadCliente(s); break;
+                //case 2:
+                    //io.cadVendedor(s); break;
+                //case 3: ...
+            }
+
+            op = io.menu();
+        }
     }
 }
