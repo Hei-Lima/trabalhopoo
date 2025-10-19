@@ -13,13 +13,18 @@ public class Venda {
     }
 
     public double valor() {
-        return veiculo.valor - veiculo.valor * desconto;
+        return veiculo.valor - desconto;
     }
 
     public void setDesconto(double desconto, Gerente gerente, String senha) {
         if (gerente.validarAcesso(senha)) {
             this.desconto = desconto;
         }
+    }
+
+    // Sem senha pq a atividade buga com a senha.
+    public void setDesconto(double desconto) {
+        this.desconto = desconto;
     }
 
     public String toString() {

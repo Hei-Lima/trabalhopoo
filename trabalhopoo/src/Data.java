@@ -21,4 +21,7 @@ public class Data {
         return ano;
     }
 
+    public String toString() {
+        return dia + "/" + mes + "/" + ano;
+    }
 }

@@ -10,6 +10,10 @@ public class Vendedor extends Funcionario {
         this.comissao = comissao;
     }
 
+    public ArrayList<Venda> getVendidos() {
+        return vendidos;
+    }
+
     public void addVenda(Venda v) {
         vendidos.add(v);
     }
@@ -30,10 +34,10 @@ public class Vendedor extends Funcionario {
         for (Venda v : vendidos) {
             Data data = v.d;
             if (data.getAno() == ano) {
-                valorTotal += v.valor();
+                valorTotal += v.valor() * comissao;
             };
         };
-        return valorTotal * comissao;
+        return valorTotal;
     }
 
     @Override
