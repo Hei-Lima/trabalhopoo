@@ -25,4 +25,8 @@ public class Pessoa {
         return this.getNome() + " - CPF: " + this.getCpf();
     }
 
+
+    public int getIdade(Data hoje) {
+        return this.nasc.deltaAnos(hoje);
+    }
 }

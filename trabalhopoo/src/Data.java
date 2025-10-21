@@ -21,6 +21,14 @@ public class Data {
         return ano;
     }
 
+    public int deltaAnos(Data outra) {
+        int delta = outra.ano - this.ano;
+        if (outra.mes < this.mes || (outra.mes == this.mes && outra.dia < this.dia)) {
+            delta--;
+        }
+        return delta;
+    }
+
     public String toString() {
         return dia + "/" + mes + "/" + ano;
     }
